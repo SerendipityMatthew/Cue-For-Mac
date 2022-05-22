@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct cueApp: App {
+    @State private var selection = "Red"
+    let colors = ["Red", "Green", "Blue", "Black", "Tartan"]
     var body: some Scene {
         WindowGroup {
-            CueSerialPortPara()
+            SerialPortParaAll()
         }
     }
 }
