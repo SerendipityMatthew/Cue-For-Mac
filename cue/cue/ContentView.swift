@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      
+        HStack{
+            CueFunctionPanel()
+        }
+        .frame(width: 1462, height: 752, alignment: .topLeading)
+
+        .background(Color.black)
     }
 }
 

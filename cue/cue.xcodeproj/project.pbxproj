@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */; };
+		341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B132839E99D00F12065 /* CueSerialPortPara.swift */; };
 		34F3DA2628390C4D00436387 /* cueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F3DA2528390C4D00436387 /* cueApp.swift */; };
 		34F3DA2828390C4D00436387 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F3DA2728390C4D00436387 /* ContentView.swift */; };
 		34F3DA2A28390C4E00436387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F3DA2928390C4E00436387 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		147F11E3EBF65B5568FEE2F7 /* Pods_cueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueFunctionPanel.swift; sourceTree = "<group>"; };
+		341F3B132839E99D00F12065 /* CueSerialPortPara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPara.swift; sourceTree = "<group>"; };
 		34F3DA2228390C4D00436387 /* cue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F3DA2528390C4D00436387 /* cueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cueApp.swift; sourceTree = "<group>"; };
 		34F3DA2728390C4D00436387 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				34F3DA2928390C4E00436387 /* Assets.xcassets */,
 				34F3DA2E28390C4E00436387 /* cue.entitlements */,
 				34F3DA2B28390C4E00436387 /* Preview Content */,
+				341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */,
+				341F3B132839E99D00F12065 /* CueSerialPortPara.swift */,
 			);
 			path = cue;
 			sourceTree = "<group>";
@@ -407,6 +413,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */,
+				341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */,
 				34F3DA2828390C4D00436387 /* ContentView.swift in Sources */,
 				34F3DA2628390C4D00436387 /* cueApp.swift in Sources */,
 			);
