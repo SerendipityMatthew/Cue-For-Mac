@@ -9,12 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      
-        HStack{
+        VStack{
             CueFunctionPanel()
+            HStack{
+                SerialPortParaAll()
+                    .frame( height: 700,alignment: .topLeading)
+                LogCollectPanel()
+            }.frame(width: 1050, height: 700, alignment: .topLeading)
         }
         .frame(width: 1462, height: 752, alignment: .topLeading)
-
+        .padding(EdgeInsets(top: 10,leading: 14, bottom: 0, trailing: 10))
         .background(Color.black)
     }
 }

@@ -21,6 +21,7 @@ struct CueFunctionPanel: View {
             .frame(width: 60, height: 60, alignment:.center)
             .buttonStyle(BorderlessButtonStyle())
             .border(Color.gray, width: 1)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
 
             Button(action: {
                 print("button pressed")
@@ -46,6 +47,7 @@ struct CueFunctionPanel: View {
             .border(Color.gray, width: 1)
         }
         .frame(width: 1050, height: 80, alignment: .leading)
+     
         .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.6))
         .cornerRadius(10)
         

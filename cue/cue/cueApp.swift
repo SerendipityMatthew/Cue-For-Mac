@@ -13,7 +13,7 @@ struct cueApp: App {
     let colors = ["Red", "Green", "Blue", "Black", "Tartan"]
     var body: some Scene {
         WindowGroup {
-            SerialPortParaAll()
+            ContentView()
         }
     }
 }

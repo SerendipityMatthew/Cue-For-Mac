@@ -12,6 +12,7 @@
 		341F3B18283A0C7700F12065 /* CueSerialPortPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */; };
 		341F3B1C283A28DD00F12065 /* IOParaSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */; };
 		341F3B1E283A311500F12065 /* SerialPortParaAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1D283A311500F12065 /* SerialPortParaAll.swift */; };
+		341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B21283A44BA00F12065 /* LogCollectPanel.swift */; };
 		34F3DA2628390C4D00436387 /* cueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F3DA2528390C4D00436387 /* cueApp.swift */; };
 		34F3DA2828390C4D00436387 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F3DA2728390C4D00436387 /* ContentView.swift */; };
 		34F3DA2A28390C4E00436387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F3DA2928390C4E00436387 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPanel.swift; sourceTree = "<group>"; };
 		341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOParaSettingPanel.swift; sourceTree = "<group>"; };
 		341F3B1D283A311500F12065 /* SerialPortParaAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortParaAll.swift; sourceTree = "<group>"; };
+		341F3B21283A44BA00F12065 /* LogCollectPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectPanel.swift; sourceTree = "<group>"; };
 		34F3DA2228390C4D00436387 /* cue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F3DA2528390C4D00436387 /* cueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cueApp.swift; sourceTree = "<group>"; };
 		34F3DA2728390C4D00436387 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,14 @@
 			path = serialportpara;
 			sourceTree = "<group>";
 		};
+		341F3B20283A449300F12065 /* logcollect */ = {
+			isa = PBXGroup;
+			children = (
+				341F3B21283A44BA00F12065 /* LogCollectPanel.swift */,
+			);
+			path = logcollect;
+			sourceTree = "<group>";
+		};
 		34F3DA1928390C4D00436387 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		34F3DA2428390C4D00436387 /* cue */ = {
 			isa = PBXGroup;
 			children = (
+				341F3B20283A449300F12065 /* logcollect */,
 				341F3B1F283A313100F12065 /* serialportpara */,
 				34F3DA2528390C4D00436387 /* cueApp.swift */,
 				34F3DA2728390C4D00436387 /* ContentView.swift */,
@@ -430,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */,
 				341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */,
 				341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */,
 				34F3DA2828390C4D00436387 /* ContentView.swift in Sources */,
