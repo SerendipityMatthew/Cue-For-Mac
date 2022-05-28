@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct CueSerialPortPara: View {
-    @State private var selection = "Red"
-    let colors = ["Red", "Green", "Blue", "Black", "Tartan"]
+    @State var selection: String = ""
+    var dropDownList = BaudrateConstants.BaudRate_List
+    
     var serialPortParaName : String
-    init (paraName : String){
+    
+    init(paraName : String, dataList:[String]){
         self.serialPortParaName = paraName
+        self.dropDownList = dataList
     }
+    
     var body: some View {
         HStack{
             Text("\(serialPortParaName)")
@@ -21,7 +25,8 @@ struct CueSerialPortPara: View {
                
             Spacer()
             Picker("",selection: $selection) {
-                ForEach(colors, id: \.self) {
+                let _ = print("election 1111 election = \(selection)")
+                ForEach(dropDownList, id: \.self) {
                     Text($0)
                         .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
                         .cornerRadius(5)
@@ -38,6 +43,6 @@ struct CueSerialPortPara: View {
 
 struct CueSerialPortPara_Previews: PreviewProvider {
     static var previews: some View {
-        CueSerialPortPara(paraName: "端口")
+        CueSerialPortPara(paraName: "端口", dataList: BaudrateConstants.BaudRate_List)
     }
 }

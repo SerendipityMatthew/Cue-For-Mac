@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct CueSerialPortPanel: View {
-    let serialPortParaList = ["串口", "波特率", "数据位", "校验位", "停止位"]
+    let serialPortParaList:[CuePortPara] = initCuePortConfig()
 
     var body: some View {
         VStack(){
             Text("串口参数设置")
                     .frame(alignment: .leading)
             VStack {
-                ForEach(serialPortParaList, id:\.self){
-                    CueSerialPortPara(paraName: $0)
+                ForEach(serialPortParaList){ cuePortPara in
+                    CueSerialPortPara(
+                        paraName: cuePortPara.portParaName,
+                        dataList: cuePortPara.paraDataList)
                 }.padding([.top, .bottom], 6)
             }
         }
