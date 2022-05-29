@@ -9,9 +9,13 @@ import SwiftUI
 
 struct IOParaSettingPanel: View {
     @State private var selected = "TEXT"
+    private var functionTitle = String()
+    init(title: String){
+        functionTitle = title
+    }
     var body: some View {
         VStack(){
-            Text("接受日志参数设置").padding(.top, 5)
+            Text(functionTitle).padding(.top, 5)
             HStack(){
                 Picker(selection: $selected, label: Text("")) {
                     Text("TEXT").tag("TEXT").padding(.trailing,20)
@@ -28,6 +32,6 @@ struct IOParaSettingPanel: View {
 
 struct IOParaSettingPanel_Previews: PreviewProvider {
     static var previews: some View {
-        IOParaSettingPanel()
+        IOParaSettingPanel(title: "接受日志参数设置")
     }
 }
