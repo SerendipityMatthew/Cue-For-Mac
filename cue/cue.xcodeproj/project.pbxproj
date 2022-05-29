@@ -13,6 +13,7 @@
 		341F3B1C283A28DD00F12065 /* IOParaSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */; };
 		341F3B1E283A311500F12065 /* SerialPortParaAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1D283A311500F12065 /* SerialPortParaAll.swift */; };
 		341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B21283A44BA00F12065 /* LogCollectPanel.swift */; };
+		34222A9828442DB100D16A74 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 34222A9728442DB100D16A74 /* ORSSerial */; };
 		34BAD665284261DB00C59DE7 /* PortParaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAD664284261DB00C59DE7 /* PortParaViewModel.swift */; };
 		34BAD6672842E25C00C59DE7 /* BaudRateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAD6662842E25C00C59DE7 /* BaudRateEnum.swift */; };
 		34BCCED32841AB3A00A96DDB /* CueSerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCCED22841AB3A00A96DDB /* CueSerialPort.swift */; };
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB118E29F39D02FC673E40D8 /* Pods_cue.framework in Frameworks */,
+				34222A9828442DB100D16A74 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +252,9 @@
 			dependencies = (
 			);
 			name = cue;
+			packageProductDependencies = (
+				34222A9728442DB100D16A74 /* ORSSerial */,
+			);
 			productName = cue;
 			productReference = 34F3DA2228390C4D00436387 /* cue.app */;
 			productType = "com.apple.product-type.application";
@@ -325,6 +330,9 @@
 				Base,
 			);
 			mainGroup = 34F3DA1928390C4D00436387;
+			packageReferences = (
+				34222A9628442DB100D16A74 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
 			productRefGroup = 34F3DA2328390C4D00436387 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -808,6 +816,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34222A9628442DB100D16A74 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34222A9728442DB100D16A74 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34222A9628442DB100D16A74 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34F3DA1A28390C4D00436387 /* Project object */;
 }
