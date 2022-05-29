@@ -14,13 +14,8 @@ struct CueSerialPortPanel: View {
         VStack(){
             Text("串口参数设置")
                     .frame(alignment: .leading)
-            VStack {
-                ForEach(serialPortParaList){ cuePortPara in
-                    CueSerialPortPara(
-                        paraName: cuePortPara.portParaName,
-                        dataList: cuePortPara.paraDataList)
-                }.padding([.top, .bottom], 6)
-            }
+        
+            CueSerialPortPara()
         }
         .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
         .cornerRadius(10)

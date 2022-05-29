@@ -13,6 +13,8 @@
 		341F3B1C283A28DD00F12065 /* IOParaSettingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */; };
 		341F3B1E283A311500F12065 /* SerialPortParaAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B1D283A311500F12065 /* SerialPortParaAll.swift */; };
 		341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B21283A44BA00F12065 /* LogCollectPanel.swift */; };
+		34BAD665284261DB00C59DE7 /* PortParaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAD664284261DB00C59DE7 /* PortParaViewModel.swift */; };
+		34BAD6672842E25C00C59DE7 /* BaudRateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAD6662842E25C00C59DE7 /* BaudRateEnum.swift */; };
 		34BCCED32841AB3A00A96DDB /* CueSerialPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCCED22841AB3A00A96DDB /* CueSerialPort.swift */; };
 		34BCCED52841ABFF00A96DDB /* CuePortConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCCED42841ABFF00A96DDB /* CuePortConstants.swift */; };
 		34BCCED72841AEC800A96DDB /* ReceiveSendFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCCED62841AEC800A96DDB /* ReceiveSendFormat.swift */; };
@@ -55,6 +57,8 @@
 		341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOParaSettingPanel.swift; sourceTree = "<group>"; };
 		341F3B1D283A311500F12065 /* SerialPortParaAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortParaAll.swift; sourceTree = "<group>"; };
 		341F3B21283A44BA00F12065 /* LogCollectPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectPanel.swift; sourceTree = "<group>"; };
+		34BAD664284261DB00C59DE7 /* PortParaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortParaViewModel.swift; sourceTree = "<group>"; };
+		34BAD6662842E25C00C59DE7 /* BaudRateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaudRateEnum.swift; sourceTree = "<group>"; };
 		34BCCED22841AB3A00A96DDB /* CueSerialPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPort.swift; sourceTree = "<group>"; };
 		34BCCED42841ABFF00A96DDB /* CuePortConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuePortConstants.swift; sourceTree = "<group>"; };
 		34BCCED62841AEC800A96DDB /* ReceiveSendFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveSendFormat.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */,
 				341F3B1B283A28DD00F12065 /* IOParaSettingPanel.swift */,
 				341F3B1D283A311500F12065 /* SerialPortParaAll.swift */,
+				34BAD664284261DB00C59DE7 /* PortParaViewModel.swift */,
+				34BAD6662842E25C00C59DE7 /* BaudRateEnum.swift */,
 			);
 			path = serialportpara;
 			sourceTree = "<group>";
@@ -465,7 +471,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */,
+				34BAD665284261DB00C59DE7 /* PortParaViewModel.swift in Sources */,
 				34BCCED52841ABFF00A96DDB /* CuePortConstants.swift in Sources */,
+				34BAD6672842E25C00C59DE7 /* BaudRateEnum.swift in Sources */,
 				341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */,
 				341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */,
 				34F3DA2828390C4D00436387 /* ContentView.swift in Sources */,
