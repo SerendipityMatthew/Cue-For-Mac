@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CueSerialPortPara: View {
-    @State var baudRateSelection: String = ""
-    @State var dataBitsSelection: String = ""
-    @State var paritySelection: String = ""
-    @State var stopBitsSelection: String = ""
+    @State var baudRateSelection: String = BaudrateConstants.BaudRate_List[0]
+    @State var dataBitsSelection: String =  DataBitsConstants.DataBits_List[0]
+    @State var paritySelection: String = ParityConstants.Parity_List[0]
+    @State var stopBitsSelection: String = StopBitsConstants.StopBits_List[0]
 
     
     var baudRateList = BaudrateConstants.BaudRate_List
