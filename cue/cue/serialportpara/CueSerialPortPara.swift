@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+class PortNameListObject: ObservableObject {
+    @Published var portNameList: [String] = []
+
+    init(){
+        addFirst()
+    }
+    func addFirst(){
+        portNameList.append("")
+    }
+    
+}
 
 struct CueSerialPortPara: View {
     @Binding var cueSerialPort: CueSerialPort
     
-    var portNameList = PortNameConstants.PortNameList
+    @ObservedObject var portNameListObject: PortNameListObject
+    
     var baudRateList = BaudrateConstants.BaudRate_List
     var dataBitsList = DataBitsConstants.DataBits_List
     var parityList = ParityConstants.Parity_List
@@ -26,8 +38,8 @@ struct CueSerialPortPara: View {
                 Spacer()
                 Picker(selection: self.$cueSerialPort.portName,
                        label: Text("")) {
-                    ForEach(portNameList, id: \.self) { data in
-                        Text(data)
+                    ForEach(portNameListObject.portNameList, id: \.self) { portName in
+                        Text(portName)
                             .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
                             .cornerRadius(5)
                     }
@@ -119,6 +131,9 @@ struct CueSerialPortPara: View {
 
 struct CueSerialPortPara_Previews: PreviewProvider {
     static var previews: some View {
-        CueSerialPortPara(cueSerialPort: .constant(CueSerialPort()))
+        CueSerialPortPara(
+            cueSerialPort: .constant(CueSerialPort()),
+            portNameListObject: PortNameListObject()
+        )
     }
 }

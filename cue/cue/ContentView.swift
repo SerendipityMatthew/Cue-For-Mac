@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import ORSSerial
 
 struct ContentView: View {
     @State private var cueSerialPort = CueSerialPort()
+    @State private var portNameList = PortNameListObject()
     var body: some View {
         VStack{
-            CueFunctionPanel()
+            CueFunctionPanel(cueSerialPort: $cueSerialPort, portNameListObject: portNameList)
             HStack{
-                SerialPortParaAll(cueSerialPort: $cueSerialPort)
+                SerialPortParaAll(cueSerialPort: $cueSerialPort,
+                                  portNameListObject: portNameList )
                     .frame( height: 700,alignment: .topLeading)
                 LogCollectPanel()
             }.frame(width: 1050, height: 700, alignment: .topLeading)

@@ -9,11 +9,16 @@ import SwiftUI
 
 struct SerialPortParaAll: View {
     @Binding var cueSerialPort: CueSerialPort
+    @ObservedObject var portNameListObject: PortNameListObject
+
     var body: some View {
 
         VStack(){
 
-            CueSerialPortPanel(cueSerialPort: $cueSerialPort)
+            CueSerialPortPanel(
+                portNameListObject: portNameListObject,
+                cueSerialPort: $cueSerialPort
+                )
                 .frame(width: 250, height: 293, alignment: .center)
                 .background(Color(red: 38/255, green: 38/255, blue: 44/255).opacity(0.6))
                 .cornerRadius(10)
@@ -33,6 +38,10 @@ struct SerialPortParaAll: View {
 
 struct SerialPortParaAll_Previews: PreviewProvider {
     static var previews: some View {
-        SerialPortParaAll(cueSerialPort: .constant(CueSerialPort()))
+        SerialPortParaAll(
+            cueSerialPort: .constant(CueSerialPort()),
+            portNameListObject: PortNameListObject()
+        )
+
     }
 }

@@ -7,12 +7,47 @@
 
 import SwiftUI
 import SVGView
+import ORSSerial
 
 struct CueFunctionPanel: View {
+    @Binding var cueSerialPort: CueSerialPort
+    @ObservedObject var portNameListObject: PortNameListObject
+
     var body: some View {
         HStack(alignment: .top, spacing: 20){
+            Spacer().frame(width: 1)
             Button(action: {
-                print("button pressed")
+                let serialPortManager = ORSSerialPortManager.shared()
+                let serialPortList = serialPortManager.availablePorts
+                portNameListObject.portNameList.removeAll()
+                serialPortList.forEach { serialPort in
+                    print("serialPort =  \(serialPort.name) " )
+                    portNameListObject.portNameList.append(serialPort.name)
+                    PortNameConstants.PortNameList.append(serialPort.name)
+                }
+                let port = ORSSerialPort(path: "/dev/cu.\(cueSerialPort.portName)")
+                let myInteger = Int(cueSerialPort.baudRate)
+                if let myInteger = Int(cueSerialPort.baudRate) {
+                    port?.baudRate = NSNumber(value:myInteger)
+                }
+                if (cueSerialPort.portName.isEmpty){
+                    return
+                }
+                port?.parity = .none
+                port?.numberOfStopBits = 1
+                
+                port?.usesDTRDSRFlowControl = true
+                print("serialPort: cueSerialPort = \(cueSerialPort) " )
+                if (port?.isOpen == false){
+                    port?.open()
+                }
+                var isOpened = port?.isOpen
+
+                print("serialPort: port?.name = \(port?.name) " )
+                print("serialPort: port?.path = \(port?.path) " )
+
+                print("serialPort: port?.open() = \(isOpened) " )
+
             }, label: {
                 Image("start_button_image")
                     .resizable()
@@ -21,7 +56,7 @@ struct CueFunctionPanel: View {
             .frame(width: 60, height: 60, alignment:.center)
             .buttonStyle(BorderlessButtonStyle())
             .border(Color.gray, width: 1)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 
             Button(action: {
                 print("button pressed")
@@ -56,6 +91,7 @@ struct CueFunctionPanel: View {
 
 struct CueFunctionPanel_Previews: PreviewProvider {
     static var previews: some View {
-        CueFunctionPanel()
+        CueFunctionPanel(cueSerialPort: .constant(CueSerialPort()),
+        portNameListObject: PortNameListObject())
     }
 }

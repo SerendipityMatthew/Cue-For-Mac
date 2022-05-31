@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct CueSerialPortPanel: View {
+    @ObservedObject var portNameListObject: PortNameListObject
+
     @Binding var cueSerialPort: CueSerialPort
-    let serialPortParaList:[CuePortPara] = initCuePortConfig()
     var body: some View {
         VStack(){
             Text("串口参数设置")
                     .frame(alignment: .leading)
         
-            CueSerialPortPara(cueSerialPort: $cueSerialPort)
+            CueSerialPortPara(
+                cueSerialPort: $cueSerialPort,
+                portNameListObject: portNameListObject
+            )
         }
         .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
         .cornerRadius(10)
@@ -25,6 +29,9 @@ struct CueSerialPortPanel: View {
 
 struct CueSerialPortPanel_Previews: PreviewProvider {
     static var previews: some View {
-        CueSerialPortPanel(cueSerialPort: .constant(CueSerialPort()))
+        CueSerialPortPanel(
+            portNameListObject: PortNameListObject(),
+            cueSerialPort: .constant(CueSerialPort())
+        )
     }
 }

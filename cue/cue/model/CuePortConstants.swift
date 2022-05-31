@@ -11,9 +11,9 @@ struct PortNameConstants {
     static let PortNameDefault: String = ""
  
     
-    static let PortNameList:[String] = [
+    static var PortNameList:[String] = [
         PortNameDefault
-    ]
+    ].removeDuplicate()
 }
 
 struct BaudrateConstants {
