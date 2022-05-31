@@ -8,6 +8,6 @@
 import Foundation
 
 enum ReceiveSendFormat: String{
-    case text = "text"
-    case hex = "hex"
+    case text = "TEXT"
+    case hex = "HEX"
 }

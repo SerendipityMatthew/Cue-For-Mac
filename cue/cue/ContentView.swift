@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var cueSerialPort = CueSerialPort()
     var body: some View {
         VStack{
             CueFunctionPanel()
             HStack{
-                SerialPortParaAll()
+                SerialPortParaAll(cueSerialPort: $cueSerialPort)
                     .frame( height: 700,alignment: .topLeading)
                 LogCollectPanel()
             }.frame(width: 1050, height: 700, alignment: .topLeading)
