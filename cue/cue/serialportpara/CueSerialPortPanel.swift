@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CueSerialPortPanel: View {
     let serialPortParaList:[CuePortPara] = initCuePortConfig()
-//    @Binding var cueSerialPort: CueSerialPort
     var body: some View {
         VStack(){
             Text("串口参数设置")

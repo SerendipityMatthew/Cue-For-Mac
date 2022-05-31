@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct PortNameConstants {
+    static let PortNameDefault: String = ""
+ 
+    
+    static let PortNameList:[String] = [
+        PortNameDefault
+    ]
+}
+
 struct BaudrateConstants {
     static let Baudrate_9600 = "9600"
     static let Baudrate_19200 = "19200"
