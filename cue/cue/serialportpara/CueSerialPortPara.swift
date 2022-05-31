@@ -8,11 +8,7 @@
 import SwiftUI
 
 struct CueSerialPortPara: View {
-    @State var baudRateSelection: String = BaudrateConstants.BaudRate_List[0]
-    @State var dataBitsSelection: String =  DataBitsConstants.DataBits_List[0]
-    @State var paritySelection: String = ParityConstants.Parity_List[0]
-    @State var stopBitsSelection: String = StopBitsConstants.StopBits_List[0]
-
+    @Binding var cueSerialPort: CueSerialPort
     
     var baudRateList = BaudrateConstants.BaudRate_List
     var dataBitsList = DataBitsConstants.DataBits_List
@@ -26,8 +22,7 @@ struct CueSerialPortPara: View {
                     .frame(alignment: .leading)
                    
                 Spacer()
-                Picker(selection: $baudRateSelection, label: Text("")) {
-                    let _ = print("election 1111 election = \(baudRateSelection)")
+                Picker(selection: self.$cueSerialPort.baudRate, label: Text("")) {
                     ForEach(baudRateList, id: \.self) { data in
                         Text(data)
                             .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
@@ -46,8 +41,7 @@ struct CueSerialPortPara: View {
                     .frame(alignment: .leading)
                    
                 Spacer()
-                Picker(selection: $dataBitsSelection, label: Text("")) {
-                    let _ = print("election 1111 election = \(dataBitsSelection)")
+                Picker(selection: self.$cueSerialPort.dataBits, label: Text("")) {
                     ForEach(dataBitsList, id: \.self) { data in
                         Text(data)
                             .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
@@ -66,8 +60,7 @@ struct CueSerialPortPara: View {
                     .frame(alignment: .leading)
                    
                 Spacer()
-                Picker(selection: $paritySelection, label: Text("")) {
-                    let _ = print("election 1111 election = \(paritySelection)")
+                Picker(selection: self.$cueSerialPort.parity, label: Text("")) {
                     ForEach(parityList, id: \.self) { data in
                         Text(data)
                             .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
@@ -86,8 +79,7 @@ struct CueSerialPortPara: View {
                     .frame(alignment: .leading)
                    
                 Spacer()
-                Picker(selection: $stopBitsSelection, label: Text("")) {
-                    let _ = print("election 1111 election = \(stopBitsSelection)")
+                Picker(selection: self.$cueSerialPort.stopBits, label: Text("")) {
                     ForEach(stopBitsList, id: \.self) { data in
                         Text(data)
                             .background(Color(red: 55/255, green: 55/255, blue:64/255).opacity(0.2))
@@ -106,6 +98,6 @@ struct CueSerialPortPara: View {
 
 struct CueSerialPortPara_Previews: PreviewProvider {
     static var previews: some View {
-        CueSerialPortPara()
+        CueSerialPortPara(cueSerialPort: .constant(CueSerialPort()))
     }
 }
