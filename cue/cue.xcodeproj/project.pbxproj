@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1876E983285226B5009CB8E9 /* LogKeywordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876E982285226B5009CB8E9 /* LogKeywordRow.swift */; };
+		189B58B92850E55200B806F0 /* LogKeywordConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */; };
+		189B58BB2850E5C500B806F0 /* LogKeyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58BA2850E5C500B806F0 /* LogKeyWord.swift */; };
+		189B58BD2850E85400B806F0 /* LogKeywordTableTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */; };
 		341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */; };
 		341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B132839E99D00F12065 /* CueSerialPortPara.swift */; };
 		341F3B18283A0C7700F12065 /* CueSerialPortPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */; };
@@ -54,6 +58,10 @@
 
 /* Begin PBXFileReference section */
 		147F11E3EBF65B5568FEE2F7 /* Pods_cueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1876E982285226B5009CB8E9 /* LogKeywordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeywordRow.swift; sourceTree = "<group>"; };
+		189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeywordConfigView.swift; sourceTree = "<group>"; };
+		189B58BA2850E5C500B806F0 /* LogKeyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeyWord.swift; sourceTree = "<group>"; };
+		189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeywordTableTitle.swift; sourceTree = "<group>"; };
 		341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueFunctionPanel.swift; sourceTree = "<group>"; };
 		341F3B132839E99D00F12065 /* CueSerialPortPara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPara.swift; sourceTree = "<group>"; };
 		341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPanel.swift; sourceTree = "<group>"; };
@@ -132,6 +140,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		189B58B72850E39200B806F0 /* function */ = {
+			isa = PBXGroup;
+			children = (
+				189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */,
+				189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */,
+				1876E982285226B5009CB8E9 /* LogKeywordRow.swift */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
 		341F3B1F283A313100F12065 /* serialportpara */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +187,7 @@
 				34BCCED42841ABFF00A96DDB /* CuePortConstants.swift */,
 				34BCCED62841AEC800A96DDB /* ReceiveSendFormat.swift */,
 				34BCCED82841ED0700A96DDB /* CuePortPara.swift */,
+				189B58BA2850E5C500B806F0 /* LogKeyWord.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -198,6 +217,7 @@
 		34F3DA2428390C4D00436387 /* cue */ = {
 			isa = PBXGroup;
 			children = (
+				189B58B72850E39200B806F0 /* function */,
 				3428D3A2284608A4008FA865 /* extension */,
 				34BCCED12841A9E200A96DDB /* model */,
 				341F3B20283A449300F12065 /* logcollect */,
@@ -320,7 +340,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					34F3DA2128390C4D00436387 = {
 						CreatedOnToolsVersion = 13.4;
@@ -493,6 +513,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */,
+				189B58B92850E55200B806F0 /* LogKeywordConfigView.swift in Sources */,
+				1876E983285226B5009CB8E9 /* LogKeywordRow.swift in Sources */,
 				34BAD665284261DB00C59DE7 /* PortParaViewModel.swift in Sources */,
 				34BCCED52841ABFF00A96DDB /* CuePortConstants.swift in Sources */,
 				3428D3A4284608C2008FA865 /* ExtFunction.swift in Sources */,
@@ -504,6 +526,8 @@
 				34BCCEDB2841EDEB00A96DDB /* CueUtil.swift in Sources */,
 				341F3B1E283A311500F12065 /* SerialPortParaAll.swift in Sources */,
 				34BCCED72841AEC800A96DDB /* ReceiveSendFormat.swift in Sources */,
+				189B58BB2850E5C500B806F0 /* LogKeyWord.swift in Sources */,
+				189B58BD2850E85400B806F0 /* LogKeywordTableTitle.swift in Sources */,
 				34BCCED32841AB3A00A96DDB /* CueSerialPort.swift in Sources */,
 				341F3B1C283A28DD00F12065 /* IOParaSettingPanel.swift in Sources */,
 				34F3DA2628390C4D00436387 /* cueApp.swift in Sources */,
@@ -578,6 +602,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -638,6 +663,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -669,6 +695,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"cue/Preview Content\"";
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -698,6 +725,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"cue/Preview Content\"";
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -724,6 +752,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -744,6 +773,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -763,6 +793,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -781,6 +812,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = TBX3UXUR8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
