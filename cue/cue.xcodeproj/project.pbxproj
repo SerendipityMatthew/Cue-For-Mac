@@ -11,6 +11,7 @@
 		189B58B92850E55200B806F0 /* LogKeywordConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */; };
 		189B58BB2850E5C500B806F0 /* LogKeyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58BA2850E5C500B806F0 /* LogKeyWord.swift */; };
 		189B58BD2850E85400B806F0 /* LogKeywordTableTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */; };
+		18D371542858BD6D00EA19BC /* CueConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D371532858BD6D00EA19BC /* CueConfig.swift */; };
 		341F3B122839C9BF00F12065 /* CueFunctionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */; };
 		341F3B142839E99D00F12065 /* CueSerialPortPara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B132839E99D00F12065 /* CueSerialPortPara.swift */; };
 		341F3B18283A0C7700F12065 /* CueSerialPortPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */; };
@@ -62,6 +63,7 @@
 		189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeywordConfigView.swift; sourceTree = "<group>"; };
 		189B58BA2850E5C500B806F0 /* LogKeyWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeyWord.swift; sourceTree = "<group>"; };
 		189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogKeywordTableTitle.swift; sourceTree = "<group>"; };
+		18D371532858BD6D00EA19BC /* CueConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueConfig.swift; sourceTree = "<group>"; };
 		341F3B112839C9BF00F12065 /* CueFunctionPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueFunctionPanel.swift; sourceTree = "<group>"; };
 		341F3B132839E99D00F12065 /* CueSerialPortPara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPara.swift; sourceTree = "<group>"; };
 		341F3B17283A0C7700F12065 /* CueSerialPortPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueSerialPortPanel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		189B58B72850E39200B806F0 /* function */ = {
 			isa = PBXGroup;
 			children = (
+				18D371532858BD6D00EA19BC /* CueConfig.swift */,
 				189B58B82850E55200B806F0 /* LogKeywordConfigView.swift */,
 				189B58BC2850E85400B806F0 /* LogKeywordTableTitle.swift */,
 				1876E982285226B5009CB8E9 /* LogKeywordRow.swift */,
@@ -514,6 +517,7 @@
 			files = (
 				341F3B22283A44BA00F12065 /* LogCollectPanel.swift in Sources */,
 				189B58B92850E55200B806F0 /* LogKeywordConfigView.swift in Sources */,
+				18D371542858BD6D00EA19BC /* CueConfig.swift in Sources */,
 				1876E983285226B5009CB8E9 /* LogKeywordRow.swift in Sources */,
 				34BAD665284261DB00C59DE7 /* PortParaViewModel.swift in Sources */,
 				34BCCED52841ABFF00A96DDB /* CuePortConstants.swift in Sources */,
