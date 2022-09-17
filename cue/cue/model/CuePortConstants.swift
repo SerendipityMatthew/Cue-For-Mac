@@ -22,13 +22,15 @@ struct BaudrateConstants {
     static let Baudrate_38400 = "38400"
     static let Baudrate_57600 = "57600"
     static let Baudrate_115200 = "115200"
-    
+    static let Baudrate_2000000 = "2000000"
+
     static let BaudRate_List:[String] = [
         Baudrate_9600,
         Baudrate_19200,
         Baudrate_38400,
         Baudrate_57600,
         Baudrate_115200,
+        Baudrate_2000000,
     ]
 }
 

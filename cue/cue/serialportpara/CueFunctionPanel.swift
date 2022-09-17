@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SVGView
 import ORSSerial
 
 struct CueFunctionPanel: View {
@@ -25,7 +24,10 @@ struct CueFunctionPanel: View {
                     portNameListObject.portNameList.append(serialPort.name)
                     PortNameConstants.PortNameList.append(serialPort.name)
                 }
+                print("serialPort: cueSerialPort.portName = \(cueSerialPort.portName) " )
+
                 let port = ORSSerialPort(path: "/dev/cu.\(cueSerialPort.portName)")
+                let serialPath = "/dev/cu.\(cueSerialPort.portName)";
                 let myInteger = Int(cueSerialPort.baudRate)
                 if let myInteger = Int(cueSerialPort.baudRate) {
                     port?.baudRate = NSNumber(value:myInteger)
@@ -33,20 +35,8 @@ struct CueFunctionPanel: View {
                 if (cueSerialPort.portName.isEmpty){
                     return
                 }
-                port?.parity = .none
-                port?.numberOfStopBits = 1
-                
-                port?.usesDTRDSRFlowControl = true
-                print("serialPort: cueSerialPort = \(cueSerialPort) " )
-                if (port?.isOpen == false){
-                    port?.open()
-                }
-                var isOpened = port?.isOpen
+                CueSerialPortDelegate().runProcessingInput(serialPath: serialPath, baudRate: 2000000)
 
-                print("serialPort: port?.name = \(port?.name) " )
-                print("serialPort: port?.path = \(port?.path) " )
-
-                print("serialPort: port?.open() = \(isOpened) " )
 
             }, label: {
                 Image("start_button_image")
