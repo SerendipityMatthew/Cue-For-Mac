@@ -9,17 +9,31 @@ import SwiftUI
 
 struct LogKeywordTableTitle: View {
     var body: some View {
-        HStack(){
-            Text("关键词")
-            Spacer()
-            Text("忽略大小写")
-            Spacer()
-            Text("忽略空格")
-            Spacer()
-            Text("颜色选择器")
-            Spacer()
-            Text("关闭")
-            Spacer()
+        HStack(alignment: VerticalAlignment.center){
+
+         
+            Group(){
+                Text("关键词")
+                
+            }.frame(width: 150, height: 30)
+                .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.8))
+            Group(){
+                Text("忽略大小写")
+            }.frame(width: 150, height: 30)
+                .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.8))
+            Group(){
+                Text("忽略空格")
+            }.frame(width: 150, height: 30)
+                .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.8))
+
+            Group(){
+                Text("颜色选择器")
+            }.frame(width: 150, height: 30)
+                .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.8))
+            Group(){
+                Text("关闭")
+            }.frame(width: 150, height: 30)
+                .background(Color(red: 38/256, green: 38/256, blue: 44/256).opacity(0.8))
         }
     }
 }
